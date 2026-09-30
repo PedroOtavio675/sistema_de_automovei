@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1790807204 source:c:\users\iftm\downloads\trabalho_tcd\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"funcoes.h"
+
+1790806876 c:\users\iftm\downloads\trabalho_tcd\funcoes.h
+
+1790730859 source:c:\users\iftm\downloads\trabalho_tcd\centralizar.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<windows.h>
+	<string.h>
+	"funcoes.h"
+
