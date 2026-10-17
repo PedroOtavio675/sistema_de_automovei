@@ -15,3 +15,89 @@
 	<string.h>
 	"funcoes.h"
 
+1792270827 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792270480 c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\funcoes.h
+
+1791989655 c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\struct_veiculo.h
+
+1792271044 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\cadastrar_veiculo.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792023620 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\busca_por_codigo.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792023627 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\busca_por_placa.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792268026 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\carregar_dados.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792179313 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\salvar_dados.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792270574 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\ler_texto.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792183152 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\contar_veiculos.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792190633 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\aumentar_vetor.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1792268026 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\listar_veiculos.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+

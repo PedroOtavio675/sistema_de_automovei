@@ -31,15 +31,39 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="cadastrar_veiculo.c">
+		<Unit filename="aumentar_vetor.c">
 			<Option compilerVar="CC" />
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="busca_por_codigo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="busca_por_placa.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cadastrar_veiculo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="carregar_dados.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="contar_veiculos.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="funcoes.h" />
+		<Unit filename="ler_texto.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="salvar_dados.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="struct_veiculo.h" />
+		<Unit filename="trabalho_tcd.cbp" />
 		<Unit filename="trabalho_tcd.depend" />
+		<Unit filename="trabalho_tcd.layout" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

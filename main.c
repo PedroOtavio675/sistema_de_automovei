@@ -2,118 +2,141 @@
 #include <stdlib.h>
 
 #include <locale.h>
+#include "struct_veiculo.h"
 #include "funcoes.h"
+#define MAX 100
+
+void mostrar_menu(){
+ printf("\n");
+printf("\033[36m==================================================\033[0m\n");
+printf("\033[1;36m       SISTEMA DE GERENCIAMENTO DE VEICULOS\033[0m\n");
+printf("\033[90m                 TCD 6 - ADS\033[0m\n");
+printf("\033[36m==================================================\033[0m\n");
+printf("\n");
+printf("\033[1;37m[ CADASTRO E CONSULTA ]\033[0m\n");
+printf(" 1. Cadastrar veiculo       2. Listar veiculos\n");
+printf(" 3. Buscar por codigo       4. Buscar por placa\n");
+printf(" 5. Alterar dados           6. Excluir veiculo\n");
+printf("\n");
+printf("\033[1;37m[ RELATORIOS E ALGORITMOS ]\033[0m\n");
+printf(" 7. Calcular valor medio    8. Veiculo de maior valor\n");
+printf(" 9. Ordenar veiculos       10. Busca sequencial\n");
+printf("11. Busca binaria\n");
+printf("\n");
+printf("\033[1;37m[ ARQUIVOS ]\033[0m\n");
+printf("12. Salvar dados           13. Carregar dados\n");
+printf("\n");
+printf("\033[31m 0. Sair do sistema\033[0m\n");
+printf("\033[36m==================================================\033[0m\n");
+printf("\nDigite uma opcao: ");
+}
 
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
     char op_char[10], op_sair_char[10];
-    int op_num, op_sair_num;
-    int tamanhoTela = 80;
+    int op_num, op_sair_num = 0;
 
 
-   do {
-        printf("\n");
-        printf("\033[33m======================================================\033[0m\n");
-        printf("\033[1;33m           SISTEMA DE CADASTRO DE VEICULOS   \033[0m\n");
-        printf("\033[33m======================================================\033[0m\n");
-        printf("\033[1;33m     1. Cadastrar veiculo   13. Carregar dados\n");
-        printf("     2. Listar veiculos     3. Buscar por codigo\n");
-        printf("     4. Buscar por placa    5. Alterar dados\n");
-        printf("     6. Excluir veiculo     7. C. valor m. veiculos\n");
-        printf("     8. V. de maior valor   9. Ordenar veiculos\n");
-        printf("     10. Busca sequencial   11. Busca binaria\n");
-        printf("     12. Salvar dados       14. Sair\033[0m\n");
-        printf("\033[33m======================================================\033[0m\n");
-        printf("Digite uma opcao: ");
-        fgets(op_char, sizeof(op_char), stdin);
-        op_num = atoi(op_char);
-        switch (op_num) {
-            case 1:
+
+    Veiculo *veiculos = malloc(MAX * sizeof(Veiculo));
+    if(veiculos == NULL){
+        printf("Sem memória!\n");
+        return 1;
+    }
+    int capacidade=MAX;
+    int qtd_no_vetor = carregar_dados(&veiculos, &capacidade);
+    int qtd = qtd_no_vetor;
+
+
+   int sair = 0;
+
+do {
+    system("cls");
+    mostrar_menu();
+    fgets(op_char, sizeof(op_char), stdin);
+    op_num = atoi(op_char);
+
+
+    switch (op_num) {
+        case 1:
+            system("cls");
+            cadastrar_veiculo(veiculos, &qtd);
+            break;
+
+        case 2:
+            listar_veiculos(veiculos, qtd_no_vetor);
+            break;
+
+        case 3:
+            printf("\n\033[1;37m[3] Buscar por codigo\033[0m\n");
+            break;
+
+        case 4:
+            printf("\n\033[1;37m[4] Buscar por placa\033[0m\n");
+            break;
+
+        case 5:
+            printf("\n\033[1;37m[5] Alterar dados\033[0m\n");
+            break;
+
+        case 6:
+            printf("\n\033[1;37m[6] Excluir veiculo\033[0m\n");
+            break;
+
+        case 7:
+            printf("\n\033[1;37m[7] Calcular valor medio dos veiculos\033[0m\n");
+            break;
+
+        case 8:
+            printf("\n\033[1;37m[8] Identificar veiculo de maior valor\033[0m\n");
+            break;
+
+        case 9:
+            printf("\n\033[1;37m[9] Ordenar veiculos\033[0m\n");
+            break;
+
+        case 10:
+            printf("\n\033[1;37m[10] Busca sequencial\033[0m\n");
+            break;
+
+        case 11:
+            printf("\n\033[1;37m[11] Busca binaria\033[0m\n");
+            break;
+
+        case 12:
+            if (salvar_dados(veiculos, qtd) == 1) {
+                printf("\033[32mDados salvos com sucesso!\033[0m\n");
+                qtd = 0;
+            } else {
+                printf("\033[31mErro ao salvar no arquivo!\033[0m\n");
+            }
+            break;
+
+        case 13:
+            carregar_dados(&veiculos, &capacidade);
+            break;
+
+        case 0:
+            printf("\n\033[1;31mVoce tem certeza que deseja sair?\033[0m\n");
+            printf("\033[31mDigite 1 para sair ou aperte qualquer tecla para ficar: \033[0m");
+            fgets(op_sair_char, sizeof(op_sair_char), stdin);
+            op_sair_num = atoi(op_sair_char);
+
+            if (op_sair_num == 1) {
+                sair = 1;
+                printf("\n\033[36mPrograma encerrado, volte sempre!\033[0m\n\n");
+            } else {
                 system("cls");
-                printf("\n[1] Cadastrar veículo\n");
-                break;
+                printf("\033[32mObrigado por ficar!\033[0m\n");
+            }
+            break;
 
-            case 2:
-                system("cls");
-                printf("\n[2] Listar veículos\n");
-                break;
-
-            case 3:
-                system("cls");
-                printf("\n[3] Buscar por código\n");
-                break;
-
-            case 4:
-                system("cls");
-                printf("\n[4] Buscar por placa\n");
-                break;
-
-            case 5:
-                system("cls");
-                printf("\n[5] Alterar dados\n");
-                break;
-
-            case 6:
-                system("cls");
-                printf("\n[6] Excluir veículo\n");
-                break;
-
-            case 7:
-                system("cls");
-                printf("\n[7] Calcular valor médio dos veiculos\n");
-                break;
-
-            case 8:
-                system("cls");
-                printf("\n[8] Identificar veiculo de maior valor\n");
-                break;
-
-            case 9:
-                system("cls");
-                printf("\n[9] Ordenar veiculos\n");
-                break;
-
-            case 10:
-                system("cls");
-                printf("\n[10] Busca sequencial\n");
-                break;
-
-            case 11:
-                system("cls");
-                printf("\n[11] Busca binária\n");
-                break;
-
-            case 12:
-                system("cls");
-                printf("\n[12] Salvar dados\n");
-                break;
-
-            case 13:
-                system("cls");
-                printf("\n[13] Carregar dados\n");
-                break;
-
-            case 14:
-                printf("\033[1;31mVocê tem certeza que deseja sair?\n");
-                printf("Digite 1 para sair ou aperte qualquer tecla para ficar: [ ]\b\b\033[0m");
-                fgets(op_sair_char, sizeof(op_sair_char), stdin);
-                op_sair_num = atoi(op_sair_char);
-                if(op_sair_num==1){
-                        printf("\nProgama encerrado, volte sempre!\n\n");
-                   break;
-                }else{
-                    op_num=0;
-                }
-            default:
-                if(op_sair_num!=0&&op_num==0){
-                    system("cls");
-                    printf("\033[32mObrigado por voltar!\033[0m\n");
-                }else{
-                    system("cls");
-                printf("\nOpção inválida! Tente novamente.\n");
-                }
-        }
-    } while (op_num != 14);
+        default:
+            printf("\n\033[31mOpcao invalida! Tente novamente.\033[0m\n");
+            break;
+    }
+} while (!sair);
+    free(veiculos);
     return 0;
 }
