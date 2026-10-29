@@ -105,7 +105,7 @@ int cadastrar_veiculo(Veiculo v[], int *qtd) {
         }
     } while (invalido);
 
-    v[*qtd] = novo;    // Grava no vetor global
+    v[*qtd] = novo;    // Grava no vetor global temporario
     (*qtd)++;
 
     printf("\n\033[32mVeiculo cadastrado com sucesso!\033[0m\n");

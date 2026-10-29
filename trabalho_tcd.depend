@@ -101,3 +101,89 @@
 	"struct_veiculo.h"
 	"funcoes.h"
 
+1793311653 source:c:\users\iftm\downloads\t\sistema_de_automovei\aumentar_vetor.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793311653 c:\users\iftm\downloads\t\sistema_de_automovei\struct_veiculo.h
+
+1793314283 c:\users\iftm\downloads\t\sistema_de_automovei\funcoes.h
+
+1793311653 source:c:\users\iftm\downloads\t\sistema_de_automovei\busca_por_codigo.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793311653 source:c:\users\iftm\downloads\t\sistema_de_automovei\busca_por_placa.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793311653 source:c:\users\iftm\downloads\t\sistema_de_automovei\cadastrar_veiculo.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793311653 source:c:\users\iftm\downloads\t\sistema_de_automovei\carregar_dados.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793311653 source:c:\users\iftm\downloads\t\sistema_de_automovei\contar_veiculos.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793311653 source:c:\users\iftm\downloads\t\sistema_de_automovei\ler_texto.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793311653 source:c:\users\iftm\downloads\t\sistema_de_automovei\salvar_dados.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793312554 source:c:\users\iftm\downloads\t\sistema_de_automovei\listar_veiculos.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793312692 source:c:\users\iftm\downloads\t\sistema_de_automovei\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+

@@ -44,6 +44,9 @@ int main()
         printf("Sem memória!\n");
         return 1;
     }
+
+    Veiculo *para_salvar_veiculos = malloc(MAX * sizeof(Veiculo));
+
     int capacidade=MAX;
     int qtd_no_vetor = carregar_dados(&veiculos, &capacidade);
     int qtd = qtd_no_vetor;
@@ -52,7 +55,6 @@ int main()
    int sair = 0;
 
 do {
-    system("cls");
     mostrar_menu();
     fgets(op_char, sizeof(op_char), stdin);
     op_num = atoi(op_char);
@@ -61,7 +63,7 @@ do {
     switch (op_num) {
         case 1:
             system("cls");
-            cadastrar_veiculo(veiculos, &qtd);
+            cadastrar_veiculo(para_salvar_veiculos, &qtd);
             break;
 
         case 2:
@@ -106,9 +108,11 @@ do {
 
         case 12:
             if (salvar_dados(veiculos, qtd) == 1) {
+                system("cls");
                 printf("\033[32mDados salvos com sucesso!\033[0m\n");
                 qtd = 0;
             } else {
+                system("cls");
                 printf("\033[31mErro ao salvar no arquivo!\033[0m\n");
             }
             break;
