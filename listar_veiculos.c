@@ -35,5 +35,6 @@ void listar_veiculos(Veiculo v[], int qtd){
     }
 
     system("pause");
+    system("cls");
 }
 

@@ -33,7 +33,6 @@
 		</Compiler>
 		<Unit filename="aumentar_vetor.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="busca_por_codigo.c">
 			<Option compilerVar="CC" />
@@ -54,6 +53,9 @@
 		<Unit filename="ler_texto.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="listar_veiculos.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -64,6 +66,7 @@
 		<Unit filename="trabalho_tcd.cbp" />
 		<Unit filename="trabalho_tcd.depend" />
 		<Unit filename="trabalho_tcd.layout" />
+		<Unit filename="veiculos.dat" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

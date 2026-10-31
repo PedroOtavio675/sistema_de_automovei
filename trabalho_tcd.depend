@@ -15,18 +15,18 @@
 	<string.h>
 	"funcoes.h"
 
-1792270827 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\main.c
+1793470397 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	"struct_veiculo.h"
 	"funcoes.h"
 
-1792270480 c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\funcoes.h
+1793472919 c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\funcoes.h
 
 1791989655 c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\struct_veiculo.h
 
-1792271044 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\cadastrar_veiculo.c
+1793470446 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\cadastrar_veiculo.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -50,7 +50,7 @@
 	"struct_veiculo.h"
 	"funcoes.h"
 
-1792268026 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\carregar_dados.c
+1793472878 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\carregar_dados.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -77,7 +77,7 @@
 	"struct_veiculo.h"
 	"funcoes.h"
 
-1792183152 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\contar_veiculos.c
+1793472878 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\contar_veiculos.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -93,7 +93,7 @@
 	"struct_veiculo.h"
 	"funcoes.h"
 
-1792268026 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\listar_veiculos.c
+1793456834 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\listar_veiculos.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>

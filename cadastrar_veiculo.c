@@ -29,7 +29,7 @@ void transformar_maiusculo(char *texto){
 }
 
 
-int cadastrar_veiculo(Veiculo v[], int *qtd) {
+int cadastrar_veiculo(Veiculo v[], int *qtd, Veiculo v_lista[], int qtd_lista) {
     Veiculo novo;
     int invalido;
 
@@ -47,7 +47,7 @@ int cadastrar_veiculo(Veiculo v[], int *qtd) {
         if (novo.codigo <= 0) {
             printf("\033[31mCodigo invalido!\033[0m\n");
             invalido = 1;
-        } else if (busca_por_codigo(v, *qtd, novo.codigo) != -1) {
+        } else if (busca_por_codigo(v_lista, qtd_lista, novo.codigo) != -1) {
             printf("\033[31mEsse codigo ja existe!\033[0m\n");
             invalido = 1;
         }

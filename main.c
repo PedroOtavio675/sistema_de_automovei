@@ -39,17 +39,17 @@ int main()
 
 
 
-    Veiculo *veiculos = malloc(MAX * sizeof(Veiculo));
+    Veiculo *veiculos = malloc(MAX * sizeof(Veiculo)); //(PRINCIPAL) CRIA O VETOR (QUE PODE SER REALOCADO) ONDE VÃO SER FEITAS TODAS AS BUSCAS E ATERAÇÕES
     if(veiculos == NULL){
         printf("Sem memória!\n");
         return 1;
     }
 
-    Veiculo *para_salvar_veiculos = malloc(MAX * sizeof(Veiculo));
+    Veiculo *para_salvar_veiculos = malloc(MAX * sizeof(Veiculo)); //(SECUNDARIO) ESSE VETOR É APENAS PARA OS CARROS CADASTRADOS EM EXECUÇÃO
 
     int capacidade=MAX;
-    int qtd_no_vetor = carregar_dados(&veiculos, &capacidade);
-    int qtd = qtd_no_vetor;
+    int qtd_no_vetor = carregar_dados(&veiculos, &capacidade); //CARREGA OS DADOS DO ARQUIVO PARA O VETOR PRINCIPAL E RETORNA A QUANTIDADE
+    int qtd = 0; //VARIAVEL PARA O VETOR SECUNDÁRIO
 
 
    int sair = 0;
@@ -63,11 +63,11 @@ do {
     switch (op_num) {
         case 1:
             system("cls");
-            cadastrar_veiculo(para_salvar_veiculos, &qtd);
+            cadastrar_veiculo(para_salvar_veiculos, &qtd, veiculos, qtd_no_vetor); //VAISALVANDO NO VETOR SECUNDARIO
             break;
 
         case 2:
-            listar_veiculos(veiculos, qtd_no_vetor);
+            listar_veiculos(veiculos, qtd_no_vetor); //LISTA SÓ O QUE TÁ NO VETOR PRIMARIO
             break;
 
         case 3:
@@ -107,7 +107,7 @@ do {
             break;
 
         case 12:
-            if (salvar_dados(veiculos, qtd) == 1) {
+            if (salvar_dados(para_salvar_veiculos, &qtd) == 1) { //SALVA OS DADOS DO VETOR SECUNDARIO NO ARQUIVO
                 system("cls");
                 printf("\033[32mDados salvos com sucesso!\033[0m\n");
                 qtd = 0;
@@ -118,7 +118,7 @@ do {
             break;
 
         case 13:
-            carregar_dados(&veiculos, &capacidade);
+            qtd_no_vetor = carregar_dados(&veiculos, &capacidade); //CARREGA DO ARQUIVO PRO VETOR PRIMARIO
             break;
 
         case 0:
