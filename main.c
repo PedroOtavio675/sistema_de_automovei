@@ -72,7 +72,7 @@ do {
             break;
 
         case 5:
-            printf("\n\033[1;37m[5] Alterar dados\033[0m\n");
+            alterar_dados(veiculos, qtd_no_vetor);
             break;
 
         case 6:
