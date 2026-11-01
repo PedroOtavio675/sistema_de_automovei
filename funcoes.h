@@ -2,9 +2,11 @@
 #define FUNCOES_H_INCLUDED
 int cadastrar_veiculo(Veiculo v[], int *qtd, Veiculo v_lista[], int qtd_lista);
 
-int busca_por_codigo(const Veiculo v[],int qtd,int codigo);
+int busca_por_codigo_v_primario(const Veiculo v[],int qtd,int codigo);
+int busca_por_codigo_v_secundario(const Veiculo v[],int qtd,int codigo);
 
-int busca_por_placa(const Veiculo v[], int qtd, char placa[]);
+int busca_por_placa_v_primario(const Veiculo v[], int qtd, char placa[]);
+int busca_por_placa_v_secundario(const Veiculo v[], int qtd, char placa[]);
 
 int ler_texto(const char *msg, char *dest, int tam);
 

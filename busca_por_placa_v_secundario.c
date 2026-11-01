@@ -5,7 +5,7 @@
 #include "struct_veiculo.h"
 #include "funcoes.h"
 
-int busca_por_placa(const Veiculo v[], int qtd, char placa[]){
+int busca_por_placa_v_secundario(const Veiculo v[], int qtd, char placa[]){
 for(int i=0; i!=qtd; i++){
     if(strcmp(v[i].placa, placa) == 0) return i;
 }

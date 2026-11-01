@@ -34,10 +34,10 @@
 		<Unit filename="aumentar_vetor.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="busca_por_codigo.c">
+		<Unit filename="busca_por_codigo_v_primario.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="busca_por_placa.c">
+		<Unit filename="busca_por_placa_v_primario.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="cadastrar_veiculo.c">

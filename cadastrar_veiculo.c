@@ -29,7 +29,7 @@ void transformar_maiusculo(char *texto){
 }
 
 
-int cadastrar_veiculo(Veiculo v[], int *qtd, Veiculo v_lista[], int qtd_lista) {
+int cadastrar_veiculo(Veiculo v_secundario[], int *qtd_secundario, Veiculo v_primario[], int qtd_primario) {
     Veiculo novo;
     int invalido;
 
@@ -47,9 +47,14 @@ int cadastrar_veiculo(Veiculo v[], int *qtd, Veiculo v_lista[], int qtd_lista) {
         if (novo.codigo <= 0) {
             printf("\033[31mCodigo invalido!\033[0m\n");
             invalido = 1;
-        } else if (busca_por_codigo(v_lista, qtd_lista, novo.codigo) != -1) {
+        } else {
+            if (busca_por_codigo_v_primario(v_primario, qtd_primario, novo.codigo) != -1){
             printf("\033[31mEsse codigo ja existe!\033[0m\n");
             invalido = 1;
+            }else if(busca_por_codigo_v_secundario(v_secundario, *qtd_secundario, novo.codigo) != -1){
+            printf("\033[31mEsse código está salvo temporariamente!\033[0m\n");
+            invalido = 1;
+            }
         }
     } while (invalido);
 
@@ -64,9 +69,14 @@ int cadastrar_veiculo(Veiculo v[], int *qtd, Veiculo v_lista[], int qtd_lista) {
         if (strlen(novo.placa) != 7) {
             printf("\033[31mPlaca invalida! Use 7 caracteres.\033[0m\n");
             invalido = 1;
-        } else if (busca_por_placa(v, *qtd, novo.placa) != -1) {
-            printf("\033[31mEssa placa ja existe!\033[0m\n");
+        } else {
+            if (busca_por_placa_v_primario(v_primario, qtd_primario, novo.placa) != -1){
+                printf("\033[31mEssa placa ja existe!\033[0m\n");
             invalido = 1;
+            }else if(busca_por_placa_v_secundario(v_secundario, *qtd_secundario, novo.placa)!=-1){
+                printf("\033[31mEssa placa está salva temporariamente!\033[0m\n");
+            invalido = 1;
+            }
         }
     } while (invalido);
 
@@ -105,8 +115,8 @@ int cadastrar_veiculo(Veiculo v[], int *qtd, Veiculo v_lista[], int qtd_lista) {
         }
     } while (invalido);
 
-    v[*qtd] = novo;    // Grava no vetor global temporario
-    (*qtd)++;
+    v_secundario[*qtd_secundario] = novo;    // Grava no vetor global temporario
+    (*qtd_secundario)++;
 
     printf("\n\033[32mVeiculo cadastrado com sucesso!\033[0m\n");
     return 1;
