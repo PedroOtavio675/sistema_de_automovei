@@ -15,18 +15,18 @@
 	<string.h>
 	"funcoes.h"
 
-1793472878 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\main.c
+1793554916 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	"struct_veiculo.h"
 	"funcoes.h"
 
-1793539845 c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\funcoes.h
+1793553918 c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\funcoes.h
 
 1791989655 c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\struct_veiculo.h
 
-1793541321 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\cadastrar_veiculo.c
+1793553874 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\cadastrar_veiculo.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -59,7 +59,7 @@
 	"struct_veiculo.h"
 	"funcoes.h"
 
-1793472878 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\salvar_dados.c
+1793544583 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\salvar_dados.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -216,4 +216,31 @@
 	<locale.h>
 	"struct_veiculo.h"
 	"funcoes.h"
+
+1793544583 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\ler_int.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<ctype.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793550848 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\mostrar_menu.c
+	<stdio.h>
+	<stdlib.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793551649 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\mostrar_veiculo.c
+	<stdio.h>
+	<stdlib.h>
+	"struct_veiculo.h"
+	"funcoes.h"
+
+1793554036 source:c:\users\pedro\documents\iftm\2°semestre\algoritmos e estruturas de dados\tcd\sistema_de_automovei\tranformar_maiusculo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
 

@@ -10,23 +10,13 @@
 // OS cadastros ficam salvos em um array de struct e só depois que é usado a opção de salvar eles vão para o arquivo;
 
 
-int ler_int(const char *msg){
-   char temporario[32];
-   ler_texto(msg, temporario, sizeof(temporario));
-   return atoi(temporario);
-}
-
 float ler_float(const char *msg){
   char temporario[32];
   ler_texto(msg, temporario, sizeof(temporario));
   return (float) atof(temporario);
 }
 
-void transformar_maiusculo(char *texto){
-    for(int i=0; texto[i] != '\0'; i++){
-        texto[i] = toupper((unsigned char) texto[i]);
-    }
-}
+
 
 
 int cadastrar_veiculo(Veiculo v_secundario[], int *qtd_secundario, Veiculo v_primario[], int qtd_primario) {

@@ -16,7 +16,7 @@ int salvar_dados(Veiculo v[],int *qtd){
 
     fclose(f); //FECHA O ARQUIVO
 
-    if(gravados != qtd) return -1; //SE O NUMERO DE CARROS CADASTRARDOS FOR DIFERENTE DO QUE FOI PEDIDO DEU RUIM E RETORNA -1
+    if(gravados != *qtd) return -1; //SE O NUMERO DE CARROS CADASTRARDOS FOR DIFERENTE DO QUE FOI PEDIDO DEU RUIM E RETORNA -1
 
     *qtd = 0; //ZERA O CONTADOR PARA NÃO SALVAR REPETIDO
 

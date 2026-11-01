@@ -1,39 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include <locale.h>
 #include "struct_veiculo.h"
 #include "funcoes.h"
 #define MAX 100
 
-void mostrar_menu(){
- printf("\n");
-printf("\033[36m==================================================\033[0m\n");
-printf("\033[1;36m       SISTEMA DE GERENCIAMENTO DE VEICULOS\033[0m\n");
-printf("\033[90m                 TCD 6 - ADS\033[0m\n");
-printf("\033[36m==================================================\033[0m\n");
-printf("\n");
-printf("\033[1;37m[ CADASTRO E CONSULTA ]\033[0m\n");
-printf(" 1. Cadastrar veiculo       2. Listar veiculos\n");
-printf(" 3. Buscar por codigo       4. Buscar por placa\n");
-printf(" 5. Alterar dados           6. Excluir veiculo\n");
-printf("\n");
-printf("\033[1;37m[ RELATORIOS E ALGORITMOS ]\033[0m\n");
-printf(" 7. Calcular valor medio    8. Veiculo de maior valor\n");
-printf(" 9. Ordenar veiculos       10. Busca sequencial\n");
-printf("11. Busca binaria\n");
-printf("\n");
-printf("\033[1;37m[ ARQUIVOS ]\033[0m\n");
-printf("12. Salvar dados           13. Carregar dados\n");
-printf("\n");
-printf("\033[31m 0. Sair do sistema\033[0m\n");
-printf("\033[36m==================================================\033[0m\n");
-printf("\nDigite uma opcao: ");
-}
 
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_NUMERIC, "C");
     char op_char[10], op_sair_char[10];
     int op_num, op_sair_num = 0;
 
@@ -58,7 +34,7 @@ do {
     mostrar_menu();
     fgets(op_char, sizeof(op_char), stdin);
     op_num = atoi(op_char);
-
+    int pos;
 
     switch (op_num) {
         case 1:
@@ -71,11 +47,28 @@ do {
             break;
 
         case 3:
-            printf("\n\033[1;37m[3] Buscar por codigo\033[0m\n");
+            int cod = ler_int("Digite o código: ");
+            pos = busca_por_codigo_v_primario(veiculos, qtd_no_vetor, cod);
+            if(pos!=-1){
+                system("cls");
+                mostrar_veiculo(veiculos[pos]);
+            }else{
+            system("cls");
+            printf("\033[31mNenhum veículo  encontrado!\033[0m\n");
+            }
             break;
-
         case 4:
-            printf("\n\033[1;37m[4] Buscar por placa\033[0m\n");
+            char placa[8];
+            ler_texto("Digite a placa: ", placa, sizeof(placa));
+            transformar_maiusculo(placa);
+            pos = busca_por_placa_v_primario(veiculos, qtd_no_vetor, placa);
+            if(pos!=-1){
+                system("cls");
+                mostrar_veiculo(veiculos[pos]);
+            }else{
+            system("cls");
+            printf("\033[31mNenhum veículo  encontrado!\033[0m\n");
+            }
             break;
 
         case 5:
@@ -108,6 +101,8 @@ do {
 
         case 12:
             if (salvar_dados(para_salvar_veiculos, &qtd) == 1) { //SALVA OS DADOS DO VETOR SECUNDARIO NO ARQUIVO
+                int r = carregar_dados(&veiculos, &capacidade); //ATUALIZA O VETOR PRIMÁRIO
+                if(r>=0) qtd_no_vetor=r;
                 system("cls");
                 printf("\033[32mDados salvos com sucesso!\033[0m\n");
                 qtd = 0;
@@ -118,7 +113,14 @@ do {
             break;
 
         case 13:
-            qtd_no_vetor = carregar_dados(&veiculos, &capacidade); //CARREGA DO ARQUIVO PRO VETOR PRIMARIO
+            //CARREGA DO ARQUIVO PRO VETOR PRIMARIO
+            qtd_no_vetor=carregar_dados(&veiculos, &capacidade);
+            if(qtd_no_vetor!=-1){
+                printf("Dados carregados com sucesso!");
+            }else{
+                qtd_no_vetor=0;
+                printf("Algo deu errado!");
+            }
             break;
 
         case 0:
