@@ -21,11 +21,11 @@ int main()
         return 1;
     }
 
-    Veiculo *para_salvar_veiculos = malloc(MAX * sizeof(Veiculo)); //(SECUNDARIO) ESSE VETOR É APENAS PARA OS CARROS CADASTRADOS EM EXECUÇÃO
+    Veiculo *vetor_secundario = malloc(MAX * sizeof(Veiculo)); //(SECUNDARIO) ESSE VETOR É APENAS PARA OS CARROS CADASTRADOS EM EXECUÇÃO
 
     int capacidade=MAX;
-    int qtd_no_vetor = carregar_dados(&veiculos, &capacidade); //CARREGA OS DADOS DO ARQUIVO PARA O VETOR PRINCIPAL E RETORNA A QUANTIDADE
-    int qtd = 0; //VARIAVEL PARA O VETOR SECUNDÁRIO
+    int qtd_primario = carregar_dados(&veiculos, &capacidade); //CARREGA OS DADOS DO ARQUIVO PARA O VETOR PRINCIPAL E RETORNA A QUANTIDADE
+    int qtd_secundario = 0; //VARIAVEL PARA O VETOR SECUNDÁRIO
 
 
    int sair = 0;
@@ -39,16 +39,16 @@ do {
     switch (op_num) {
         case 1:
             system("cls");
-            cadastrar_veiculo(para_salvar_veiculos, &qtd, veiculos, qtd_no_vetor); //VAISALVANDO NO VETOR SECUNDARIO
+            cadastrar_veiculo(vetor_secundario, &qtd_secundario, veiculos, qtd_primario); //VAISALVANDO NO VETOR SECUNDARIO
             break;
 
         case 2:
-            listar_veiculos(veiculos, qtd_no_vetor); //LISTA SÓ O QUE TÁ NO VETOR PRIMARIO
+            listar_veiculos(veiculos, qtd_primario); //LISTA SÓ O QUE TÁ NO VETOR PRIMARIO
             break;
 
         case 3:
             int cod = ler_int("Digite o código: ");
-            pos = busca_por_codigo_v_primario(veiculos, qtd_no_vetor, cod);
+            pos = busca_por_codigo_v_primario(veiculos, qtd_primario, cod);
             if(pos!=-1){
                 system("cls");
                 mostrar_veiculo(veiculos[pos]);
@@ -61,7 +61,7 @@ do {
             char placa[8];
             ler_texto("Digite a placa: ", placa, sizeof(placa));
             transformar_maiusculo(placa);
-            pos = busca_por_placa_v_primario(veiculos, qtd_no_vetor, placa);
+            pos = busca_por_placa_v_primario(veiculos, qtd_primario, placa);
             if(pos!=-1){
                 system("cls");
                 mostrar_veiculo(veiculos[pos]);
@@ -72,7 +72,9 @@ do {
             break;
 
         case 5:
-            alterar_dados(veiculos, qtd_no_vetor);
+            if(!alterar_dados(veiculos, qtd_primario)){
+               carregar_dados(&veiculos, &capacidade);
+            }
             break;
 
         case 6:
@@ -100,12 +102,12 @@ do {
             break;
 
         case 12:
-            if (salvar_dados(para_salvar_veiculos, &qtd) == 1) { //SALVA OS DADOS DO VETOR SECUNDARIO NO ARQUIVO
+            if (salvar_dados(vetor_secundario, &qtd_secundario) == 1) { //SALVA OS DADOS DO VETOR SECUNDARIO NO ARQUIVO
                 int r = carregar_dados(&veiculos, &capacidade); //ATUALIZA O VETOR PRIMÁRIO
-                if(r>=0) qtd_no_vetor=r;
+                if(r>=0) qtd_primario=r;
                 system("cls");
                 printf("\033[32mDados salvos com sucesso!\033[0m\n");
-                qtd = 0;
+                qtd_secundario = 0;
             } else {
                 system("cls");
                 printf("\033[31mErro ao salvar no arquivo!\033[0m\n");
@@ -114,11 +116,11 @@ do {
 
         case 13:
             //CARREGA DO ARQUIVO PRO VETOR PRIMARIO
-            qtd_no_vetor=carregar_dados(&veiculos, &capacidade);
-            if(qtd_no_vetor!=-1){
+            qtd_primario=carregar_dados(&veiculos, &capacidade);
+            if(qtd_primario!=-1){
                 printf("Dados carregados com sucesso!");
             }else{
-                qtd_no_vetor=0;
+                qtd_primario=0;
                 printf("Algo deu errado!");
             }
             break;

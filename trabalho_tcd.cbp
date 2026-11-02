@@ -31,13 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="alterar_dados.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="aumentar_vetor.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="busca_por_codigo_v_primario.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="busca_por_codigo_v_secundario.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="busca_por_placa_v_primario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="busca_por_placa_v_secundario.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="cadastrar_veiculo.c">
@@ -49,7 +58,16 @@
 		<Unit filename="contar_veiculos.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="formulario.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="funcoes.h" />
+		<Unit filename="ler_float.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ler_int.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="ler_texto.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -59,6 +77,12 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="mostrar_menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mostrar_veiculo.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="salvar_dados.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -66,6 +90,9 @@
 		<Unit filename="trabalho_tcd.cbp" />
 		<Unit filename="trabalho_tcd.depend" />
 		<Unit filename="trabalho_tcd.layout" />
+		<Unit filename="tranformar_maiusculo.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="veiculos.dat" />
 		<Extensions />
 	</Project>

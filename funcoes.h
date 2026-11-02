@@ -4,7 +4,7 @@ void transformar_maiusculo(char *texto);
 void mostrar_menu();
 void mostrar_veiculo(Veiculo v);
 
-int formulario(Veiculo *novo, Veiculo v_primario[], int qtd_primario, Veiculo v_secundario[], int qtd_secundario);
+int formulario(Veiculo *novo, Veiculo v_primario[], int qtd_primario, Veiculo v_secundario[], int qtd_secundario, int ignorar_pos);
 
 int cadastrar_veiculo(Veiculo v[], int *qtd, Veiculo v_lista[], int qtd_lista);
 
@@ -21,6 +21,7 @@ float ler_float(const char *msg);
 int carregar_dados(Veiculo **v, int *capacidade);
 
 int salvar_dados(Veiculo v[],int *qtd);
+int salvar_todos(Veiculo v[], int qtd);
 
 int contar_veiculos(const char *nome_arquivo);
 

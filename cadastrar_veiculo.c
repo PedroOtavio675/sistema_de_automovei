@@ -12,7 +12,7 @@
 
 
 int cadastrar_veiculo(Veiculo v_secundario[], int *qtd_secundario, Veiculo v_primario[], int qtd_primario) {
-    Veiculo novo;
+    Veiculo novo_veiculo;
     int invalido;
 
     printf("\n\033[36m==================================================\033[0m\n");
@@ -20,11 +20,11 @@ int cadastrar_veiculo(Veiculo v_secundario[], int *qtd_secundario, Veiculo v_pri
     printf("\033[36m==================================================\033[0m\n");
     printf("              Digite 0 para sair\n\n");
 
-    if(!formulario(&novo, v_primario, qtd_primario, v_secundario, *qtd_secundario)){
+    if(!formulario(&novo_veiculo, v_primario, qtd_primario, v_secundario, *qtd_secundario, 0)){
         return 0; // USUARIO CANCELOU
     }
 
-    v_secundario[*qtd_secundario] = novo;    // Grava no vetor global temporario
+    v_secundario[*qtd_secundario] = novo_veiculo;    // Grava no vetor global temporario
     (*qtd_secundario)++;
 
     printf("\n\033[32mVeiculo cadastrado com sucesso!\033[0m\n");

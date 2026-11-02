@@ -7,7 +7,7 @@
 #include "funcoes.h"
 
 
-int formulario(Veiculo *novo, Veiculo v_primario[], int qtd_primario, Veiculo v_secundario[], int qtd_secundario){
+int formulario(Veiculo *novo, Veiculo v_primario[], int qtd_primario, Veiculo v_secundario[], int qtd_secundario, int ignorar_pos){
     int invalido;
 
     do {
@@ -20,7 +20,8 @@ int formulario(Veiculo *novo, Veiculo v_primario[], int qtd_primario, Veiculo v_
             printf("\033[31mCodigo invalido!\033[0m\n");
             invalido = 1;
         } else {
-            if (busca_por_codigo_v_primario(v_primario, qtd_primario, novo->codigo) != -1){
+            int p = busca_por_codigo_v_primario(v_primario, qtd_primario, novo->codigo);
+            if (p != -1 && p!=ignorar_pos){
             printf("\033[31mEsse codigo ja existe!\033[0m\n");
             invalido = 1;
             }else if(busca_por_codigo_v_secundario(v_secundario, qtd_secundario, novo->codigo) != -1){
@@ -42,7 +43,8 @@ int formulario(Veiculo *novo, Veiculo v_primario[], int qtd_primario, Veiculo v_
             printf("\033[31mPlaca invalida! Use 7 caracteres.\033[0m\n");
             invalido = 1;
         } else {
-            if (busca_por_placa_v_primario(v_primario, qtd_primario, novo->placa) != -1){
+            int p = busca_por_placa_v_primario(v_primario, qtd_primario, novo->placa);
+            if (p != -1 && p!=ignorar_pos){
                 printf("\033[31mEssa placa ja existe!\033[0m\n");
             invalido = 1;
             }else if(busca_por_placa_v_secundario(v_secundario, qtd_secundario, novo->placa)!=-1){
