@@ -7,7 +7,7 @@
 #include "funcoes.h"
 
 
-int formulario(Veiculo *novo, Veiculo v_primario[], int qtd_primario, Veiculo v_secundario[], int qtd_secundario, int ignorar_pos){
+int formulario(Veiculo *novo, Veiculo v_primario[], int qtd_primario, Veiculo v_secundario[], int qtd_secundario, int ignorar_pos){ //Esse parâmetro ignorar_pos serve para a função de alterar dados
     int invalido;
 
     do {

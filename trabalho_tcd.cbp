@@ -86,6 +86,9 @@
 		<Unit filename="salvar_dados.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="salvar_todos.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="struct_veiculo.h" />
 		<Unit filename="trabalho_tcd.cbp" />
 		<Unit filename="trabalho_tcd.depend" />

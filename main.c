@@ -78,15 +78,20 @@ do {
             break;
 
         case 6:
-            printf("\n\033[1;37m[6] Excluir veiculo\033[0m\n");
+            system("cls");
+            if(excluir_veiculo(veiculos, &qtd_primario)){
+                carregar_dados(&veiculos, &capacidade);
+            }
             break;
-
         case 7:
-            printf("\n\033[1;37m[7] Calcular valor medio dos veiculos\033[0m\n");
+           system("cls");
+           valor_medio(veiculos, qtd_primario);
+           system("pause");
+           system("cls");
             break;
 
         case 8:
-            printf("\n\033[1;37m[8] Identificar veiculo de maior valor\033[0m\n");
+           void veiculo_maior_valor(Veiculo v[], int qtd);
             break;
 
         case 9:

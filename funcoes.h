@@ -30,4 +30,10 @@ int aumentar_vetor(Veiculo **v, int *capacidade, int necessario);
 void listar_veiculos(Veiculo v[], int qtd);
 
 int alterar_dados(Veiculo v[], int qtd);
+
+int excluir_veiculo(Veiculo v[], int *qtd);
+
+float valor_medio(Veiculo v[], int qtd);
+
+void veiculo_maior_valor(Veiculo v[], int qtd);
 #endif // FUNCOES_H_INCLUDED
